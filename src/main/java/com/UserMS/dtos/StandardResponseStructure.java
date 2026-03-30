@@ -15,8 +15,7 @@ public class StandardResponseStructure {
     private String errorDescription;
     private LocalDateTime responseTime;
     private Object responseData;
-    
-    // Static factory methods for success responses
+
     public static StandardResponseStructure success(Object data) {
         StandardResponseStructure response = new StandardResponseStructure();
         response.setResponseCode("200");
@@ -26,8 +25,7 @@ public class StandardResponseStructure {
         response.setResponseData(data);
         return response;
     }
-    
-    // Static factory methods for error responses
+
     public static StandardResponseStructure error(String responseCode, String errorCode, String errorDescription) {
         StandardResponseStructure response = new StandardResponseStructure();
         response.setResponseCode(responseCode);
